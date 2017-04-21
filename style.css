@@ -41,8 +41,7 @@
 } /*this rule moves all images after the 2nd one down the stack. The tilde means any elements that come after the first 'argument' (left side) in HTML source order and are siblings of the second 'argument' (right side) and have the same attribute tag*/
 
 #container .transition {
-	-webkit-transform: translate(20px, 20px);
-	-webkit-transform: scale(1.1);
 	opacity: 1;
+	transform: scale(1.5) translate(30px);
 }
 
