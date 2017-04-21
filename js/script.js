@@ -1,5 +1,6 @@
-var pics = document.getElementsByClass("pic");
+function() {
+	//first target the first image in HTML source and give it the class 'transition'
+	document.getElementById("container").getElementsByTagName("img")[0].className = "transition";
 
-for (var i = 0, i < pics.length, i++) {
-	pics[i].classList.add("transition")
+	
 }
