@@ -1,18 +1,39 @@
 #container {
+	position: absolute;
 	overflow: hidden;
 	height: 400px;
 	width: 650px;
-	transition: opacity, 5s;
-	transition: transform, 5s;
-	-webkit-transition: opacity, 5s;
-	-webkit-transition: transform, 5s;
-	z-index: -1;
+	border: 1px solid black;
 }
 
-img {
-	width: 650px;
-	height: 400px;
+#container img {
+	width: 750px;
+	height: 500px;
+	max-width: none;
+	top: 20%;
+	left: 20%;
+	margin-top: -100px;
+	margin-left: -130px;
 	position: absolute;
+	transition-property: : opacity, transform;
+	transition-duration: 3s, 8s;
+	-webkit-transition: opacity, 5s;
+	-webkit-transition: transform, 5s;
+	opacity: 0;
+
+	transform-origin: bottom left;
+}
+
+#container :nth-child(2n+1) {
+	transform-origin: top right;
+}
+
+#container :nth-child(3n+1) {
+	transform-origin: top left;
+}
+
+#container :nth-child(4n+1) {
+	transform-origin: bottom right;
 }
 
 #container .transition {
