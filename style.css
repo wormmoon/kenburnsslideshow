@@ -4,5 +4,13 @@ img {
 }
 
 .pic {
-	display: none;
+	position: absolute;
+	margin: 0 auto;
+	padding: 0 auto;
 }
+
+.transition {
+	display: block;
+	opacity: 0;
+}
+
