@@ -1,47 +1,60 @@
-#container {
-	position: absolute;
-	overflow: hidden;
-	height: 400px;
-	width: 650px;
-	border: 1px solid black;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-#container img {
-	width: 750px;
-	height: 500px;
-	max-width: none;
-	top: 20%;
-	left: 20%;
+.page-container {
+	position: relative;
+	width: 90%;
+	height: 90%;
+	max-width: 300px;  /*move this to a media query*/
+	margin: 0 auto;
+	padding: 0;
+}
+
+#img-container {
+	position: absolute;
+	overflow: hidden;
+	width: 98%;
+	height: 98%;
+}
+
+#img-container img {
+	width: 120%;
+	height: 120%;
+	/*max-width: 1024px;*/
 	margin-top: -100px;
 	margin-left: -130px;
 	position: absolute;
 	transition-property: : opacity, transform;
-	transition-duration: 3s, 8s;
-	-webkit-transition: opacity, 5s;
-	-webkit-transition: transform, 5s;
+	transition-duration: 5s, 10s;
 	opacity: 0;
 
 	transform-origin: bottom left;
 }
 
-#container :nth-child(2n+1) {
+#img-container :nth-child(2n+1) {
 	transform-origin: top right;
 }
 
-#container :nth-child(3n+1) {
+#img-container :nth-child(3n+1) {
 	transform-origin: top left;
 }
 
-#container :nth-child(4n+1) {
+#img-container :nth-child(4n+1) {
 	transform-origin: bottom right;
 } /*these rules give each consecutive image a different origin point*/
 
-#container .transition:first-child + img ~ img {
+#img-container .transition:first-child + img ~ img {
 	z-index: -1;
 } /*this rule moves all images after the 2nd one down the stack. The tilde means any elements that come after the first 'argument' (left side) in HTML source order and are siblings of the second 'argument' (right side) and have the same attribute tag*/
 
-#container .transition {
+#img-container .transition {
 	opacity: 1;
 	transform: scale(1.5) translate(30px);
 }
+
+
+/*to make black background for portrait images put images in div and make div backgrounds black*/
 
