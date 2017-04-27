@@ -1,11 +1,11 @@
 (function() {
 	//first target the first image in HTML source and give it the class 'transition'
-	document.getElementById("container").getElementsByTagName("img")[0].className = "transition";
+	document.getElementById("img-container").getElementsByTagName("img")[0].className = "transition";
 
-	window.setInterval(kenBurns, 4000);
+	window.setInterval(kenBurns, 5000);
 	//runs kenBurns function every 4 secs
 
-	var images = document.getElementById("container").getElementsByTagName("img"),
+	var images = document.getElementById("img-container").getElementsByTagName("img"),
 		numberOfImages = images.length,
 		i = 1;
 
