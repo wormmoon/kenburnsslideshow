@@ -11,3 +11,5 @@ This works by using CSS to define a 'transition' class, which animates the fadin
 in and zooming of an image by manipulating the opacity, z-index, and size of it. 
 The Javascript then iterates through all the images and either adds or removes this 
 class to create the effect between only two images at a time.
+
+See the live project at https://wormmoon.github.io/kenburnsslideshow/
